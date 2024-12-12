@@ -1,0 +1,151 @@
+:root {
+  --title-color: #6b6064;
+  --primary-color: #232d36;
+
+  --btn-hover: #b29e99;
+  --listItem-bg: #f3ecf3;
+  --border-color: #bab4b4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 3rem 0;
+
+  font-size: 20px;
+  color: var(--primary-color);
+  background-image: url(./bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-section {
+  min-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #fff;
+
+  /* max-width: 50vw; */
+}
+
+.main-title {
+  color: var(--title-color);
+}
+
+.list {
+  padding-left: 0;
+  height: 250px;
+  overflow-y: auto;
+  margin-bottom: 0;
+}
+
+li {
+  list-style-type: none;
+  background-color: var(--listItem-bg);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+li.input-group:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* main container for li */
+.liContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* container for done, important, taskText */
+.input-group-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* span check if task was checked before deletion */
+.alert-text {
+  font-size: 1rem;
+  color: red;
+}
+
+/* checkbox */
+.form-check-input[type="checkbox"] {
+  border: 1px solid rgb(39, 132, 101);
+  margin: 0;
+  border-radius: 0;
+}
+
+.form-check-input[type="checkbox"]:checked {
+  background-color: rgb(39, 132, 101);
+}
+
+.task-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: transparent;
+}
+
+.remove {
+  background-color: rgb(220, 69, 69);
+}
+
+.fa-star {
+  color: gold;
+  font-size: 1.3rem;
+}
+
+.importantTask {
+  background-color: rgb(255, 238, 143);
+}
+
+li.marked-finished {
+  background-color: rgb(138, 175, 136);
+}
+
+.finished {
+  text-decoration: line-through;
+  text-decoration-color: rgb(11, 60, 23);
+}
+
+.form-control {
+  color: inherit;
+}
+.form-control:focus {
+  border: 1px solid #363636;
+}
+
+.input-group .form-control,
+.input-group .btn {
+  height: 50px;
+  font-size: inherit;
+  border: 1px solid #9e9696;
+}
+
+.input-group .btn:hover {
+  background-color: var(--btn-hover);
+}
+
+#addButton {
+  padding: 10px;
+}
